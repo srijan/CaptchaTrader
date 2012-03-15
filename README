@@ -1,0 +1,38 @@
+CaptchaTrader.py is a VERY SIMPLE class written in python that resolves captchas
+using captchatrader.com
+
+If you like this library and you don't have an account yet at captchatrader.com,
+please, use my referer link: 
+
+             http://captchatrader.com/users/refer/serhost/ 
+
+so you will help me to test future versions of this library.
+
+The use is VERY simple
+======================
+
+1) first you need to initialize CaptchaTrader with your own data:
+
+    a = CaptchaTrader("Username", "Password", "API_KEY")
+
+2) Now you can use its functions
+
+    print a.getCredits()
+    response = a.submitURL("http://www.google.com/images/srpr/logo3w.png")
+    print "Ticket: ", response[0]
+    print "CAPTCHA: ", response[1]
+    a.respond(response[0],True);
+
+Other examples:
+
+    response = a.submitFilePath("/tmp/filetest.png")
+    response = a.submit(open("/tmp/filetest.png", "rb").read().encode("base64"))
+
+Methods avaiable in this version:
+
+ - submitURL: Downloads the URL, encodes to base64 and then submits it
+ - submitFilePath: Encodes the file to base64 and then submits it
+ - submit: Simply sumbit a base64 string
+ - getCredits: Get account credits
+ - respond: Gives feedback about the submission: Correct or incorrect
+

@@ -1,0 +1,10 @@
+16 March 2012
+-------------
+
+  * Version: 0.1 (first one). Basic functions: 
+     - submitURL: Downloads the URL, encodes to base64 and then submits it
+     - submitFilePath: Encodes the file to base64 and then submits it
+     - submit: Simply sumbit a base64 string
+     - getCredits: Get account credits
+     - respond: Gives feedback about the submission: Correct or incorrect
+
