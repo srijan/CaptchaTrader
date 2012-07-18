@@ -22,9 +22,9 @@ import urllib
 
 class CaptchaTrader():
 
-    __SUBMIT_URL__ = "http://captchatrader.com/api/submit"
-    __RESPOND_URL__ = "http://captchatrader.com/api/respond"
-    __GET_CREDITS_URL__ = "http://captchatrader.com/api/get_credits/username:%(user)s/password:%(password)s/"
+    __SUBMIT_URL__ = "http://api.captchatrader.com/submit"
+    __RESPOND_URL__ = "http://api.captchatrader.com/respond"
+    __GET_CREDITS_URL__ = "http://api.captchatrader.com/get_credits/username:%(user)s/password:%(password)s/"
 
     def __init__(self, user, password, api_key):
         self.user=user
